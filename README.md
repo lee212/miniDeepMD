@@ -21,6 +21,8 @@ closed.
 
 ## Benchmark
 
+The mlcommons-like table provides an overview of the benchmarks in this repo.
+
 | Area | Benchmark | Dataset | Quality Target | Reference Implementation Model |
 | ---- | --------- | ------- | -------------- | ------------------------------ |
 | Scientific | Biomolecular Simulation | BBA | RMSD of 1.3 ± 0.5 A | DeepDriveMD |
@@ -61,6 +63,15 @@ Packages for molecular dynamics
 - mdtools: https://github.com/braceal/MD-tools.git
 - molecules: https://github.com/braceal/molecules.git
 - mdlearn: https://github.com/ramanathanlab/mdlearn.git
+
+#### PNNL Machines
+
+In PNNL machines, the shared project provides software environment and basic settings with dataset.
+The current location is below:
+
+```
+/projects/pacer/leeh736/miniDeepMD/
+```
 
 ## Settings
 
