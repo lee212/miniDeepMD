@@ -71,6 +71,77 @@ PyTorch Training starts with user parameters to specify GPU IDs for encoder, dec
 python train_minideepmd.py -c settings/machine_learning_stage_test.yaml --encoder_gpu 0 --decoder_gpu 0 --generator_gpu 0
 ```
 
+### Output (using 1000 samples of bba dataset)
+
+```
+
+AAE3dModel(
+  (encoder): Encoder(
+    (conv): Sequential(
+      (enc_conv1): Conv1d(3, 64, kernel_size=(5,), stride=(1,))
+      (enc_relu1): ReLU(inplace=True)
+      (enc_conv2): Conv1d(64, 128, kernel_size=(3,), stride=(1,))
+      (enc_relu2): ReLU(inplace=True)
+      (enc_conv3): Conv1d(128, 256, kernel_size=(3,), stride=(1,))
+      (enc_relu3): ReLU(inplace=True)
+      (enc_conv4): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+      (enc_relu4): ReLU(inplace=True)
+      (enc_conv5): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+    )
+    (fc): Sequential(
+      (0): Linear(in_features=512, out_features=256, bias=True)
+      (1): ReLU(inplace=True)
+    )
+    (mu_layer): Linear(in_features=256, out_features=10, bias=True)
+    (std_layer): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (generator): Generator(
+    (model): Sequential(
+      (gen_linear1): Linear(in_features=10, out_features=64, bias=True)
+      (gen_relu1): ReLU(inplace=True)
+      (gen_linear2): Linear(in_features=64, out_features=128, bias=True)
+      (gen_relu2): ReLU(inplace=True)
+      (gen_linear3): Linear(in_features=128, out_features=512, bias=True)
+      (gen_relu3): ReLU(inplace=True)
+      (gen_linear4): Linear(in_features=512, out_features=1024, bias=True)
+      (gen_relu4): ReLU(inplace=True)
+      (gen_linear5): Linear(in_features=1024, out_features=84, bias=True)
+    )
+  )
+  (discriminator): Discriminator(
+    (model): Sequential(
+      (dis_linear1): Linear(in_features=10, out_features=512, bias=True)
+      (dis_relu1): ReLU(inplace=True)
+      (dis_linear2): Linear(in_features=512, out_features=512, bias=True)
+      (dis_relu2): ReLU(inplace=True)
+      (dis_linear3): Linear(in_features=512, out_features=128, bias=True)
+      (dis_relu3): ReLU(inplace=True)
+      (dis_linear4): Linear(in_features=128, out_features=64, bias=True)
+      (dis_relu4): ReLU(inplace=True)
+      (dis_linear5): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+)
+Having 800 training and 200 validation samples.
+
+Train Epoch: 1 [32/800 (4%)]    Loss_d: 0.551895    Loss_eg: 49.293213  Time: 1116.517
+Train Epoch: 1 [64/800 (8%)]    Loss_d: 0.375362    Loss_eg: 30.693209  Time: 0.013
+Train Epoch: 1 [96/800 (12%)]   Loss_d: 0.654449    Loss_eg: 26.188126  Time: 0.012
+Train Epoch: 1 [128/800 (16%)]  Loss_d: 0.332529    Loss_eg: 20.292343  Time: 0.012
+Train Epoch: 1 [160/800 (20%)]  Loss_d: 0.283047    Loss_eg: 17.256340  Time: 0.011
+Train Epoch: 1 [192/800 (24%)]  Loss_d: 0.328628    Loss_eg: 14.860723  Time: 0.011
+
+...(suppressed)...
+
+Train Epoch: 10 [640/800 (80%)] Loss_d: -5.524131   Loss_eg: 12.296304  Time: 0.011
+Train Epoch: 10 [672/800 (84%)] Loss_d: -5.410509   Loss_eg: 12.359403  Time: 0.011
+Train Epoch: 10 [704/800 (88%)] Loss_d: -5.832216   Loss_eg: 12.373447  Time: 0.011
+Train Epoch: 10 [736/800 (92%)] Loss_d: -5.510255   Loss_eg: 12.174291  Time: 0.011
+Train Epoch: 10 [768/800 (96%)] Loss_d: -5.780591   Loss_eg: 12.515926  Time: 0.011
+Train Epoch: 10 [800/800 (100%)]    Loss_d: -5.868246   Loss_eg: 11.977236  Time: 0.011
+====> Epoch: 10 Average loss_d: -5.9173 loss_eg: 13.8505
+====> Validation loss: 8.2766
+```
 
 # Reference
 
