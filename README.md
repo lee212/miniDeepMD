@@ -19,6 +19,13 @@ the distance between each encoded data point is used to recognize a
 dissimilarity from the initial structure, i.e., changing states from open to
 closed.
 
+## Benchmark
+
+| Area | Benchmark | Dataset | Quality Target | Reference Implementation Model |
+| ---- | --------- | ------- | -------------- | ------------------------------ |
+| Scientific | Biomolecular Simulation | BBA | RMSD of 1.3 ± 0.5 A | DeepDriveMD |
+
+
 ## Datasets
 
 The sample dataset is included in the repo to quickly start a benchmark with a
