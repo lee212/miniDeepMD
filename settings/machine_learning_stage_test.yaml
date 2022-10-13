@@ -1,0 +1,52 @@
+experiment_directory: ./bba/experiment1
+stage_idx: 0
+task_idx: 0
+output_path: ./bba/experiment1/machine_learning_runs/stage0000/task0000
+node_local_path: /tmp
+model_tag: stage0000_task0000
+init_weights_path: ./dataset/bba/epoch-130-20201203-150026.pt
+num_points: 28
+num_features: 0
+epochs: 10
+batch_size: 32
+latent_dim: 10
+ae_optimizer:
+    hparams:
+       lr: 0.0001
+    name: Adam
+disc_optimizer:
+    hparams:
+        lr: 0.0001
+    name: Adam    
+encoder_filters:
+- 64
+- 128
+- 256
+- 256
+- 512
+encoder_kernels:
+- 5
+- 3
+- 3
+- 1
+- 1
+decoder_affine_widths:
+- 64
+- 128
+- 512
+- 1024
+discriminator_affine_widths:
+- 512
+- 128
+- 64
+encoder_relu_slope: 0.0
+decoder_relu_slope: 0.0
+discriminator_relu_slope: 0.0
+encoder_bias: true
+decoder_bias: true
+discriminator_bias: true
+noise_mu: 0.0
+noise_std: 1.0
+lambda_rec: 0.5
+lambda_gp: 10.0
+num_data_workers: 0
