@@ -19,7 +19,9 @@ baseline: keras/tf + deepchem
 
 - featurizer
 - data loader
-- model (MPNN) by DGL and deepchem
+- model (MPNN) by DGL and deepchem ![mpnn](.fig/mpnn_example.png)*
+
+* Karlov, Dmitry S., et al. "graphDelta: MPNN scoring function for the affinity prediction of protein–ligand complexes." ACS omega 5.10 (2020): 5150-5159.
 
 ### Train
 
