@@ -24,9 +24,6 @@ RDLogger.DisableLog("rdApp.*")
 np.random.seed(42)
 tf.random.set_seed(42)
 
-csv_path = "BBBP.csv"
-df = pd.read_csv(csv_path, usecols=[1, 2, 3])
-
 
 permuted_indices = np.random.permutation(np.arange(df.shape[0]))
 permuted_indices
