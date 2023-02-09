@@ -5,7 +5,8 @@ import torch.nn.functional as F
 from torch.nn import GRU, Linear, ReLU, Sequential
 
 import torch_geometric.transforms as T
-from torch_geometric.datasets import QM9
+from torch_geometric.datasets import QM9 
+# QM7b from https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/qm7b.mat (15.3MB)
 from torch_geometric.loader import DataLoader
 from torch_geometric.nn import NNConv, Set2Set
 from torch_geometric.utils import remove_self_loops
