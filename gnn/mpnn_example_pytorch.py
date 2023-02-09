@@ -80,7 +80,7 @@ class Net(torch.nn.Module):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--epochs', type=int, default=200)
-parser.add_argument('--batch_size', type=int, default=8)
+parser.add_argument('--batch_size', type=int, default=128)
 parser.add_argument('--lr', type=float, default=0.001)
 args = parser.parse_args()
 
@@ -99,9 +99,9 @@ mean, std = mean[:, target].item(), std[:, target].item()
 test_dataset = dataset[:10000]
 val_dataset = dataset[10000:20000]
 train_dataset = dataset[20000:]
-test_loader = DataLoader(test_dataset, batch_size=128, shuffle=False)
-val_loader = DataLoader(val_dataset, batch_size=128, shuffle=False)
-train_loader = DataLoader(train_dataset, batch_size=128, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False)
+val_loader = DataLoader(val_dataset, batch_size=args.batch_size, shuffle=False)
+train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
 
 
 
