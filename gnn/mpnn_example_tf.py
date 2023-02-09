@@ -12,6 +12,8 @@ from rdkit import RDLogger
 from rdkit.Chem.Draw import IPythonConsole
 from rdkit.Chem.Draw import MolsToGridImage
 
+# borrowed from https://keras.io/examples/graph/mpnn-molecular-graphs/
+
 # Temporary suppress tf logs
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
