@@ -3,6 +3,7 @@
 - [ ] input dataset
   - [x] with nwchem, https://github.com/nkkchem/CompMolNWChem_Thermo/tree/master/data
     - [x] 3D conversion via rdkit
+  - [ ] ~~with updated script, https://github.com/PNNL-CompBio/CME-QM/tree/main/src~~
   - [ ] DFT calculation, https://github.com/nkkchem/CompMolNWChem_Thermo/tree/master/nwchem-scripts
     - [ ] Extracting nwchem output
 - [ ] MPNN model
