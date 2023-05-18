@@ -13,5 +13,5 @@
   - [x] Shifter Image for nwchem
   - [ ] PyTorch / TensorFlow
 - [ ] Other choices
- - [ ] DGL-LifeSci, https://github.com/dmlc/dgl/
- - [ ] OGB, e.g., PCQM4Mv2, https://ogb.stanford.edu/docs/lsc/leaderboards/#pcqm4mv2
+  - [ ] DGL-LifeSci, https://github.com/dmlc/dgl/
+  - [ ] OGB, e.g., PCQM4Mv2, https://ogb.stanford.edu/docs/lsc/leaderboards/#pcqm4mv2
